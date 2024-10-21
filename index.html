@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://use.typekit.net/ntv2xbq.css">
-    <title>Home</title>
+    <title>Two Truths and a Lie</title>
     
 </head>
 <body>
@@ -38,69 +38,37 @@
               <a href="insurance.html">Insurance</a>
             </div>
           </div>
-      </div> 
-      <h1>Lets Learn Javascript</h1>
-      <h2>how do we do onclick events and alerts on an anchor</h2>
+      </div>
+      <h1>Grady's Two Truths and a Lie</h1>
+      <hr>
 
-      <!-- if you want to add a go back look up a dialouge -->
-      <a href="https://www.youtube.com" target="_blank"
-       onclick="alert('You are leaving this site')">YouTube</a>
+      <h2>Introductions</h2>
+      <form action="" id="name-form">
+          <label for="fname">First Name:</label><br>
+          <input type="text" id="fname" name="fname" required><br>
+          <label for="lname">Last Name:</label><br>
+          <input type="text" id="lname" name="lname" required><br>
+          <label type="text" for="age">Age:</label><br>
+          <input type="text" id="age" name="age" required><br>
+      </form>
+      <input type="button" value="Submit" onclick="greet();">
+      <p id="greet" style="font-size: x-large;"></p>
 
-        <hr>
-        <br>
-      <h2>How do we hide an display text</h2>
-      <h2>What is my secert idenity</h2>
-      <p id="secert" hidden ></p>
-      <button onclick="document.getElementById('secert').innerHTML='I am Grady'">Show</button>
-      <button onclick="document.getElementById('secert').innerHTML=''">Hide</button>
-      <br>
+      <h2>Warm Up trivia</h2>
+      <p>What food can't go bad</p>
+      <form action="">
+          <input type="radio" id="honey" name="trivia1" value="honey">
+          <label for="trivia1-a">Honey</label><br>
+          <input type="radio" id="tuna" name="trivia1" value="bread">
+          <label for="trivia1-b">Canned Tun</label><br>
+          <input type="radio" id="beans" name="trivia1" value="milk">
+          <label for="trivia1-c">Canned Beans</label><br>
+          <input type="radio" id="chocoalte" name="trivia1" value="cheese">
+          <label for="trivia1-d">Dark Chocoalte</label><br>
+      </form>
+      <input type="button" value="Submit" onclick="checkTrivia1();">
+      <p id="trivia1-answer"></p>
 
-        <hr>
-        <br>
-        <h2>How do we change an image with js</h2>
-
-        <img id="image" src="images/bulboff.jpg" alt="image" width="200px">
-        <p></p>
-        <button onclick="document.getElementById('image').src='images/bulbon.jpg'">Turn On</button>
-        <button onclick="document.getElementById('image').src='images/bulboff.jpg'">Turn Off</button>
-        <p></p>
-        <!-- add a boarder to the image -->
-        <button onclick="document.getElementById('image').style.border='5px solid red'">Add Boarder</button>
-        <button onclick="document.getElementById('image').style.border='0px'">Remove Boarder</button>
-
-        <hr>
-        <br>
-        <div id="shade" style="background-color: red;">Add shadow to me</div>
-        <button id="shadow-button" onclick="shadower()">Shadow</button>
-        <p id="counter">0</p>
-        <script>
-            let clicks = 0; // Initialize click counter
-            function shadower(){
-                let counter = document.getElementById('counter');
-                let box = document.getElementById('shade');
-                let shadow_button = document.getElementById('shadow-button');
-
-                if(box.style.boxShadow == 'none'){
-                    box.style.boxShadow = '10px 10px 5px #888888';
-                    shadow_button.innerHTML = 'Remove Shadow';
-                    clicks++;
-                    counter.innerHTML = clicks; // Update click counter
-                } else {
-                    box.style.boxShadow = 'none';
-                    shadow_button.innerHTML = 'Add Shadow';
-                    clicks++;
-                    counter.innerHTML = clicks; // Update click counter
-                }
-            }
-
-        </script>
-
-        <h2>How do we change the style with color</h2>
-        <p id="alice">Hi. I'm Alice</p>
-        <button onclick="document.getElementById('alice').style.color='Red';
-        document.getElementById('alice').style.fontSize='5px'">Red</button>
-
-        <button onclick="document.getElementById('alice').style.color='Blue';
-        document.getElementById('alice').style.fontSize='20px'">Blue</button>
+      <script src="js/truth.js"></script>
     </body>
 </html>
