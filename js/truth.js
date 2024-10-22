@@ -40,3 +40,26 @@ function checkRadioLie() {
         lie_answer.innerHTML = fname + " sorry but you are incorrect. Try again if you want!";
     }
 }
+
+function checkCheckBoxLie() {
+    let checkbox_answer = document.getElementById("checkbox-answer");
+    let AI = document.getElementById("AI").checked; // Check if the AI checkbox is checked
+    let memory = document.getElementById("memory").checked; // Check if the memory checkbox is checked
+    let bones = document.getElementById("bones").checked; // Check if the bones checkbox is checked
+    checkbox_answer.style.color = "black"; // Reset the color of the answer text
+
+    // Check if the user selected the correct answer
+    if (AI && memory && bones) {
+        checkbox_answer.innerHTML = "Sorry but you need to select only two. Try again if you want!";
+    } else if (AI && memory) {
+        checkbox_answer.innerHTML = "Correct! I have photographic memory and I have made an AI progam. Good job " + fname + "!";
+    } else if ((AI && bones) || (memory && bones)) {
+        checkbox_answer.innerHTML = "Sorry but Only one of those is correct. Try again if you want!";
+    } else if (AI || memory || bones) {
+        checkbox_answer.innerHTML = "Sorry but you need to select two answers. Try again if you want!";
+    } else {
+        checkbox_answer.style.color = "red";
+        checkbox_answer.innerHTML = "Sorry but you did something wrong. Try again if you want!";
+    }
+
+}
