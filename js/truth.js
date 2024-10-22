@@ -27,3 +27,16 @@ function checkTrivia1() {
         trivia_answer.innerHTML = fname + " sorry but you are incorrect. Try again if you want!";
     }
 }
+
+function checkRadioLie() {
+    let lie_answer = document.getElementById("lie-answer");
+
+    let lie = document.getElementById("bone").checked; // Check if the bone radio button is checked
+
+    // Check if the user selected the correct answer
+    if (lie) {
+        lie_answer.innerHTML = "Correct! I have broken bones Good job " + fname + "!";
+    } else {
+        lie_answer.innerHTML = fname + " sorry but you are incorrect. Try again if you want!";
+    }
+}

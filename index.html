@@ -57,17 +57,49 @@
       <h2>Warm Up trivia</h2>
       <p>What food can't go bad</p>
       <form action="">
-          <input type="radio" id="honey" name="trivia1" value="honey">
+          <input type="radio" id="honey" name="trivia1">
           <label for="trivia1-a">Honey</label><br>
-          <input type="radio" id="tuna" name="trivia1" value="bread">
-          <label for="trivia1-b">Canned Tun</label><br>
-          <input type="radio" id="beans" name="trivia1" value="milk">
+          <input type="radio" id="tuna" name="trivia1">
+          <label for="trivia1-b">Canned Tuna</label><br>
+          <input type="radio" id="beans" name="trivia1">
           <label for="trivia1-c">Canned Beans</label><br>
-          <input type="radio" id="chocoalte" name="trivia1" value="cheese">
+          <input type="radio" id="chocoalte" name="trivia1">
           <label for="trivia1-d">Dark Chocoalte</label><br>
       </form>
       <input type="button" value="Submit" onclick="checkTrivia1();">
       <p id="trivia1-answer"></p>
+      <hr>
+
+      <h2>Two Truths and a Lie for me</h2>
+
+      <p>Which one is a lie</p>
+      <form action="">
+          <input type="radio" id="list" name="truth">
+          <label for="truth1">I have made a linked list data type</label><br>
+          <input type="radio" id="fire" name="truth">
+          <label for="truth2">I can make a friction fire</label><br>
+          <input type="radio" id="bone" name="truth">
+          <label for="truth3">I have never broken a bone.</label><br>
+      </form>
+      <input type="button" value="Submit" onclick="checkRadioLie();">
+      <p id="lie-answer"></p>
+
+      <hr>
+      <h2>Two Truths and a Lie different style</h2>
+      <p>choose two</p>
+      <form action="">
+        <input type="checkbox" id="list2" name="truth">
+        <label for="truth1">I have made a linked list data type</label><br>
+        <input type="checkbox" id="fire2" name="truth">
+        <label for="truth2">I can make a friction fire</label><br>
+        <input type="checkbox" id="bone2" name="truth">
+        <label for="truth3">I have never broken a bone.</label><br>
+      </form>
+      <input type="button" value="Submit" onclick="checkCheckBoxLie();">
+      <p id="checkbox-answer"></p>
+
+
+
 
       <script src="js/truth.js"></script>
     </body>
