@@ -50,12 +50,14 @@ function checkCheckBoxLie() {
 
     // Check if the user selected the correct answer
     if (AI && memory && bones) {
+        checkbox_answer.style.color = "red";
         checkbox_answer.innerHTML = "Sorry but you need to select only two. Try again if you want!";
     } else if (AI && memory) {
         checkbox_answer.innerHTML = "Correct! I have photographic memory and I have made an AI progam. Good job " + fname + "!";
     } else if ((AI && bones) || (memory && bones)) {
         checkbox_answer.innerHTML = "Sorry but Only one of those is correct. Try again if you want!";
     } else if (AI || memory || bones) {
+        checkbox_answer.style.color = "red";
         checkbox_answer.innerHTML = "Sorry but you need to select two answers. Try again if you want!";
     } else {
         checkbox_answer.style.color = "red";
